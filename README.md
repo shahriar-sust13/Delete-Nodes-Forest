@@ -1,12 +1,12 @@
 # Problem Name: Delete Nodes And Return Forest
-**Leetcode 1110 [Problem Link](https://leetcode.com/problems/delete-nodes-and-return-forest/)**
+**Leetcode 1110, [Problem Link](https://leetcode.com/problems/delete-nodes-and-return-forest/)**
 
 
 ### Tutorial
 
 Few things we should observe before going to the solution:
-1. For a node U, if it's parent node X is not deleted, then node U can't be a root of a forest.
-2. For a node U, if it's parent node X is deleted and node U is not deleted then node U must be the root of its forest.
+1. For a node **U**, if it's parent node **X** is not deleted, then node **U** can't be a root of a forest.
+2. For a node **U**, if it's parent node **X** is deleted and node **U** is not deleted then node **U** must be the root of its forest.
 3. If we store the values to be deleted in a Hash Table, then for any node we can easily determine whether it should be deleted or not by checking the node value in the hash table. If that specific node's value is set in the hash table, then we can be sure that this node should be deleted otherwise not. 
 
 We will traverse all nodes in the tree and use a **forest_root** list where root of all forests will be stored.
